@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Side Nav Bar with Content</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding:0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .sidenavbar{
+            position:fixed;
+            background-color:black;
+            width:200px;
+            height:100%;
+            top:0;
+            left:0;
+            overflow-x:hidden;
+            z-index:1;
+        }
+
+        .sidenavbar a{
+            color:white;
+            padding:16px;
+            text-decoration:none;
+            display:block;
+        }
+
+        .main-content{
+            margin-left:200px;
+            padding-left:20px;
+        }
+
+        .sidenavbar a:hover{
+            background-color: #ddd;
+            color: black;
+            transition:width ease-in-out 1s;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="sidenavbar">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+      </div>
+      
+      <div class="main-content">
+        <h2>Side Navbar</h2>
+        <p>Side navbar and content.</p>
+      </div>
+       
+</body>
+</html>
