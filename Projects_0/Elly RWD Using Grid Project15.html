@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Building a Responsive Website Using Grid Layout</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <style>
+            .item1{
+                grid-area:myarea;
+            }
+            .item2{
+                grid-area:myareamenu;
+            }
+
+            .item5{
+                grid-area:myareafooter;
+            }
+            .gridcontainer{
+                display:grid;
+                grid-template-areas:'myarea myarea myarea'
+                'myareamenu . .'
+                'myareamenu myareafooter myareafooter';
+                gap:10px;
+                background-color:#2196F3;
+                padding:20px;
+            }
+            .gridcontainer > div {
+                background-color:rgba(255, 255, 255, 0.8);
+                padding:30px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gridcontainer">
+            <div class="item1">header</div>
+            <div class="item2">menu</div>
+            <div class="item3">main</div>
+            <div class="item4">right</div>
+            <div class="item5">footer</div>
+            
+        </div>
+    </body>
+</html>
