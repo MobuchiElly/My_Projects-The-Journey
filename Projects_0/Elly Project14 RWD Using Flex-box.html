@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Responsive Web Design Using Media Query</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <style>
+        *{
+            box-sizing:border-box;
+        }
+        .flex-container{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content:space-between;
+        }
+
+        .column{
+            flex:23%;
+            text-align: center;
+        } 
+
+        @media screen and (max-width:992px) {
+            .column{
+                flex:50%;
+            }
+        }
+        @media screen and (max-width:600px){
+            .column{
+                flex:100%;
+            }
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Responsive Web Design</h1>
+        <p>Inspect and resize the page to see the responsiveness across small and large screens</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque illo consectetur tempora corrupti iusto nemo eaque magni repellat facilis quae in eius possimus maiores rem accusamus cum, ut a corporis.</p>
+        
+        <div class="flex-container">
+            <div class="column A" style="background-color: #aaa;">
+                <h2>Column A</h2>
+                <p>lorem....</p>
+            </div>
+            <div class="column B" style="background-color: #abb;">
+                <h2>Column B</h2>
+                <p>lorem.....</p>
+            </div>
+            <div class="column C" style="background-color: #acc;">
+                <h2> Column C</h2>
+                <p>lorem.....</p>
+            </div>
+            <div class="column D" style="background-color: #add;">
+                <h2>Column D</h2>
+                <p>lorem........</p>
+            </div>
+        </div>
+    </body>
+</html>
