@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Framework Using Flexbox(Unequal Column)</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        .header{
+            padding:20px;
+            text-align: center;
+        }
+        .column-row{
+            display:flex;
+        }
+        .column{
+            height:300px;
+            padding:25px;
+        }
+        .column.main {
+            flex:2;
+        }
+        .column.side{
+            flex:1;
+        }
+        .footer{
+            padding:20px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 600px){
+            .column-row{
+               flex-direction: column; 
+            }
+        }
+    </style>
+</head>
+<body>
+        <h1><b>CSS Framework using Flexbox</b></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque ad quidem velit sed mollitia voluptatem sint odio odit provident, dolorem, hic modi saepe nisi aut ea, molestias nesciunt ratione. Reprehenderit!
+            On smaller screens the columns will stack ontop of eachother.
+        </p>
+        <p>Resize the browser window to see the responsive effect.</p> 
+        <p><b>Note:</b> This is my personal framework project</p>
+        <div class="header"><h1><b>Header</b></h1></div>
+        <div class="column-row">
+            <div class="column side" style="background-color:#aaa;">Column</div>
+            <div class="column main" style="background-color:#bbb;">Column</div>
+            <div class="column side" style="background-color:#ccc;">Column</div>
+        </div>
+        <div class="footer" style="background-color:#f1f1f1;">Footer</div>
+    </body>
+
+
+
+</body>
+</html>
