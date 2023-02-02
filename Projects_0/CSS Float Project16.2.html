@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Float</title>
+    <style>
+        *{
+            box-sizing:border-box;
+        }
+
+        .header{
+            background-color: #f1f1f1;
+            text-align:center;
+            font-size:30px;
+            padding:30px;
+        }
+
+        .column{
+            float:left;
+            padding:40px;
+        }
+        .left{
+            width:20%;
+        }
+        .main{
+            width:60%;
+        }
+        .right{
+            width:20%;
+        }
+            .column-row::after {
+            content: "";
+            clear: both;
+            display: table;
+            }
+
+        .footer{
+            background-color: #f1f1f1;
+            padding:20px;
+            text-align: center;
+        }
+        
+        @media screen and (max-width:992px){
+           .column{
+            width:50%;
+           }
+           .right{
+            width:100%;
+           } 
+        }
+        @media screen and (max-width:600px){
+            .column{
+                width:100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1><b>CSS Template using Float</b></h1>
+        <p>In this example, we have created a header, three unequal columns and a footer. On smaller screens, the columns will stack on top of each other.</p>
+        <p>Resize the browser window to see the responsive effect.</p>
+    </div>
+    <div class="header">Header</div>
+    <div class="column-row">
+        <div class="column left" style="background-color:#aaa;">Column Left</div>
+        <div class="column main" style="background-color:#bbb;">Column Main</div>
+        <div class="column right" style="background-color:#ccc;">Column Right </div>
+    </div>
+    <div class="footer">Footer</div>
+    </div>
+    
+</body>
+</html>
